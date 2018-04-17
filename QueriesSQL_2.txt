@@ -1,0 +1,65 @@
+1.
+
+SELECT 
+	MIN(MinTemperatureF), ZIP
+FROM weather;
+
+"1"	"94107"
+
+2.
+
+SELECT 
+	COUNT(*)
+FROM trips;
+
+313689
+
+3.
+
+SELECT 
+	MIN(duration), trip_id, start_station, end_station
+FROM 
+trips;
+
+"60"	"1011650"	"Mezes"	"Mezes"
+
+4.
+
+SELECT 
+end_station, AVG(duration)
+FROM
+trips
+GROUP BY 
+end_station;
+
+"2nd at Folsom"	"557.050760233918"
+"2nd at South Park"	"531.589903573454"
+"2nd at Townsend"	"633.257044057377"
+"5th S at E. San Salvador St"	"1767.0"
+"5th St at E. San Salvador St"	"686.0"
+"5th St at Folsom St"	"527.298013245033"
+"5th at Howard"	"583.572311104071"
+"Adobe on Almaden"	"828.990789473684"
+"Arena Green / SAP Center"	"1426.47592592593"
+"Beale at Market"	"699.791838134431"
+"Broadway St at Battery St"	"756.494616846105"
+"California Ave Caltrain Station"	"1825.5910543131"
+"Castro Street and El Camino Real"	"802.502173913044"
+"Charleston Park/ North Bayshore Area"	"2370.22615803815"
+"Civic Center BART (7th at Market)"	"1033.10343347639"
+"Clay at Battery"	"856.799765258216"
+"Commercial at Montgomery"	"564.716529250098"
+"Cowper at University"	"1210.07079646018"
+"Cyril Magnin St at Ellis St"	"2926.22058823529"
+"Davis at Jackson"	"735.510463121784"
+"Embarcadero at Bryant"	"697.743581616482"
+"Embarcadero at Folsom"	"613.881648422408"
+"Embarcadero at Sansome"	"1400.38250762937"
+"Embarcadero at Vallejo"	"1372.67024684379"
+"Evelyn Park and Ride"	"739.013157894737"
+
+etc.
+
+
+
+ 
