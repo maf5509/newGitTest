@@ -1,0 +1,85 @@
+1. 
+
+SELECT 
+	trip_id, duration, start_station, end_station, weather.Date, events
+FROM 
+	trips
+JOIN 
+	weather
+ON 
+	DATE(start_date) = weather.Date
+WHERE 
+	weather.Events = 'Rain'
+GROUP BY
+	1
+ORDER BY 
+	duration DESC
+LIMIT 
+	3
+
+2. 
+
+WITH 
+	full_stn 
+AS (
+	SELECT 
+		station_id, COUNT(*) no_of_times
+	FROM 
+		status
+	WHERE 
+		docks_available = 0
+	GROUP BY 
+		station_id
+)	
+SELECT 
+	name, MAX(no_of_times)
+FROM 
+	full_stn
+JOIN 
+	stations
+ON
+	stations.station_id = full_stn.station_id;
+
+
+
+3.
+
+
+SELECT 
+	s.name, s.dockcount, COUNT(*) no_of_trips
+FROM 
+	trips t
+JOIN 
+	stations s
+ON
+	t.start_station = s.name
+GROUP BY 
+	s.name
+ORDER BY
+	s.dockcount DESC;
+
+4. 
+
+WITH rainy
+AS (
+	SELECT Date 
+	FROM weather
+	WHERE Events = 'Rain')
+SELECT date, MAX(t.duration)
+FROM trips t
+JOIN rainy r
+ON r.date = DATE(t.start_date)
+GROUP BY 1
+ORDER BY t.start_date;
+
+
+OR:
+
+WITH rainy_days AS (
+	SELECT date, events FROM weather
+	WHERE Events = 'Rain')
+SELECT MAX(duration), date, trip_id, start_station, end_station, events
+FROM trips t
+JOIN rainy_days r
+ON DATE(t.start_date) = r.date
+GROUP BY date
