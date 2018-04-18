@@ -1,0 +1,81 @@
+1. What's the most expensive listing? What else can you tell me about the listing?
+
+SELECT name, neighbourhood, price
+FROM listings
+ORDER BY price DESC
+LIMIT 100
+Huge Union Square Loft, Greenwich Village, 999(price; there were others listed as 9999 but probably bad data)
+
+
+2. What neighborhoods seem to be the most popular?
+
+SELECT neighbourhood, neighbourhood_group, AVG(reviews_per_month) avg_reviews
+FROM listings
+GROUP BY neighbourhood
+ORDER BY avg_reviews DESC
+LIMIT 10;
+
+"Springfield Gardens"	"Queens"	"4.349"
+"Huguenot"	     "Staten Island"	"3.47"
+"South Ozone Park"	"Queens"	"3.43272727272727"
+"East Elmhurst"	   	"Queens"        "3.33591240875912"
+"Baychester"		"Bronx"		"2.59666666666667"
+"Schuylerville"		"Bronx"		"2.41"
+"Richmondtown"		"Staten Island"	"2.36"
+"Fresh Meadows"		"Queens"	"2.29545454545455"
+"Jamaica Estates"	"Queens"	"2.24888888888889"
+"Hollis Hills"		"Queens"	"2.24"
+
+3. What time of year is the cheapest time to go to your city? What about the busiest?
+
+SELECT
+
+strftime('%m', date) AS month, AVG(price)
+
+FROM reviews
+
+JOIN listings
+
+ON reviews.listing_id = listings.id
+
+GROUP BY month;
+
+
+"01"	"138.637214745465"
+"02"	"139.728692538788"
+"03"	"134.682039215686"
+"04"	"139.353800433184"
+"05"	"137.293298192771"
+"06"	"135.507113879207"
+"07"	"135.318454001089"
+"08"	"132.894090160759"
+"09"	"133.797883059585"
+"10"	"135.52122657256"
+"11"	"136.798776642704"
+"12"	"138.829631357909"
+
+Cheapest time: August
+
+
+WITH monthly_tally AS (
+
+SELECT
+
+strftime('%m', date) AS month, COUNT(*) as no_of_reviews
+
+FROM reviews
+
+JOIN listings
+
+ON reviews.listing_id = listings.id
+
+GROUP BY month    )
+
+SELECT month, MAX(no_of_reviews)
+
+FROM monthly_tally;
+
+
+"10"	"104845"
+
+Busiest time: October
