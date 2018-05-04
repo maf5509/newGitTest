@@ -1,0 +1,34 @@
+The research proposal
+
+The problem
+
+How to improve employee satisfaction? This is a question worth answering as we would
+probably expect a happy employee to be more productive, efficient and more likely
+to stay with the company thus reducing the costs associated with hiring and training 
+new staff.
+
+The potential solution and the design of the study
+
+Average employee satisfaction in HR vs. IT in each of the three countries where
+IT is based. Thus 6 samples.
+
+Average employee satisfaction between the two disciplines for all three countries combined.
+2 samples.
+
+Average IT employee satisfaction of the two countries where there is only IT, VERSUS:
+Average IT employee satisfaction in the other three countries.
+2 samples.
+
+Use t-tests on these numbers. In each comparison, a p-value of less than 0.05 will be 
+taken as statistically significant.
+
+The test will be conducted in the form of a self-reported satisfaction survey, for 
+employees with the company longer than 3 months:
+
+1. How happy are you with your job on a scale of 1-10?
+
+2. How happy are you in general on a scale of 1-10?
+
+Based on these tests and comparisons, we should be able to determine any cross-disciplinary/
+geographical variations in employee satisfaction.
+
