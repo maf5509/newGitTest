@@ -1,0 +1,45 @@
+Two versions
+sample
+hypothesis
+Outcome(s) of interest.
+Other measured variables.
+
+
+DRILL: Getting Testy
+
+Does a new supplement help people sleep better?
+
+Compare a group of takers of the supplement to a control group of people
+that don't take it. Ideally a placebo group would be used.
+The hypothesis is that the supplement results in more hours of sleep.
+The outcome of interest would be more reported sleep in the group that
+took the supplement.
+Other measured variables: sense of well-being on a scale of 1-10,
+actual recorded fall-asleep and wake-up times.
+
+Will new uniforms help a gym's business?
+
+To be compared: the satisfaction of users of the gym before and after the uniforms
+are introduced. 
+The hypothesis: that gym users would report greater satsfaction with
+their customer experience. The outcome of interest would be more a higher 'favorability'
+score on the survey when the uniforms are worn than when not.
+Other measured variables: gym revenues, number of gym users, time spent in the gym (if this
+can be tracked).
+
+Will a new homepage improve my online exotic pet rental business?
+
+Compare the revenues of the business with and without the new homepage,
+for a specified period of time.
+The hypothesis is that the new homepage results in more business.
+The outcome of interest would be higher overall takings for the business once the
+new homepage has been implemented.
+Other measured variables: no. of site visits, time spent on site, conversion rate.
+
+If I put 'please read' in the email subject will more people read my emails?
+
+To be compared: the read rates of e-mails with the stated title, against a control group
+of e-mails with other titles but of similar content.
+The hypothesis is that the subject line would elicit more responses.
+The outcome of interest would be a higher response rate for e-mails having the subject line.
+Other measured variables: time between send and receive, length of response e-mail.
