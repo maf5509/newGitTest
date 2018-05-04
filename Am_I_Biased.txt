@@ -1,0 +1,32 @@
+DRILL: Am I Biased?
+For each of the following scenarios, call out the potential biases in the 
+proposed experiment. Do your best to try to discover not only the bias, 
+but the initial design. There is plenty of room for interpretation here, 
+so make sure to state what assumptions you're making.
+
+
+You're testing advertising emails for a bathing suit company and you test 
+one version of the email in February and the other in May.
+
+The email sent out in May likely to get a more favorable response due to 
+the proximity of summer.
+
+You open a clinic to treat anxiety and find that the people who visit show 
+a higher rate of anxiety than the general population.
+
+People who are anxious are more likely to seek psychiatric help than the 
+'average' member of the population, i.e. the group of people that come
+to the clinic is biased
+
+You launch a new ad billboard based campaign and see an increase in website 
+visits in the first week.
+
+One week is not enough time to be able to gauge the success of the campaign.
+This increase in site visits could be a simple spike due to random error.
+The study should be designed to capture traffic over a longer period of time.
+
+You launch a loyalty program but see no change in visits in the first week.
+
+A better indication about the success of the program would be the increase
+(or not) in business over time; the first week doesn't give much indication
+ as to how well th program has done. 
